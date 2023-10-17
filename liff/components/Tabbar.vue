@@ -7,7 +7,6 @@
   <van-tabbar-item icon="setting-o" badge="20">Tab</van-tabbar-item>
 </van-tabbar>
 
-
 </template>
 
 
