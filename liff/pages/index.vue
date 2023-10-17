@@ -1,25 +1,33 @@
 <template>
   <div>
-    <v-app-bar
+    <!-- <v-app-bar
       color="primary"
       dense
       flat
       dark
-    >
+    > -->
+
       <v-toolbar-title>Home</v-toolbar-title>
-    </v-app-bar>
+
+    <!-- </v-app-bar> -->
+
   <div class="home">
-    <h1 class="home__title">
-      Welcome to <br /><a
+
+    <h1 class="home__title">Welcome to <br />
+
+      <a
         class="home__title__link"
         href="https://developers.line.biz/en/docs/liff/overview/"
-        >LIFF Starter!</a
-      >
+        >LIFF Starter!
+      </a>
+
     </h1>
+
     <div class="home__badges">
       <span class="home__badges__badge badge--primary"> LIFF Starter </span>
       <span class="home__badges__badge badge--secondary"> nuxtjs </span>
       <span class="home__badges__badge badge--primary"> {{ version }} </span>
+      
       <a
         href="https://github.com/line/line-liff-v2-starter"
         target="_blank"
@@ -28,8 +36,11 @@
       >
         GitHub
       </a>
+
     </div>
+
     <div class="home__buttons">
+
       <a
         href="https://developers.line.biz/en/docs/liff/developing-liff-apps/"
         target="_blank"
@@ -38,20 +49,24 @@
       >
         LIFF Documentation
       </a>
+
       <a
         href="https://liff-playground.netlify.app/"
         target="_blank"
         rel="noreferrer"
         class="home__buttons__button button--tertiary"
       >
+
         LIFF Playground
       </a><NuxtLink to="/register">
+
       <a
         
         target="_blank"
         rel="noreferrer"
         class="home__buttons__button button--secondary"
       >
+      
        สมัครสมาชิก
       </a></NuxtLink>
     </div> </div>
