@@ -36,7 +36,7 @@ export default {
   */
   plugins: [
     '~/plugins/liff-init.client.js',
-    '~/plugins/vant.js'
+    '~/plugins/vant.js',
   ],
   /*
   ** Nuxt.js dev-modules
