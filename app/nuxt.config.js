@@ -1,15 +1,17 @@
+import colors from 'vuetify/es5/util/colors'
+
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  mode: "spa",
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  mode: 'universal',
+  /*
+  ** Headers of the page
+  */
   head: {
-    title: 'Vant Nuxt Demo',
-    htmlAttrs: {
-      lang: "en",
-    },
+    titleTemplate: '%s - ' + process.env.npm_package_name,
+    title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -20,45 +22,70 @@ export default {
       { src: 'https://static.line-scdn.net/liff/edge/2.1/sdk.js' }
     ]
   },
-  plugins: ['~/plugins/vant'],
+  /*
+  ** Customize the progress-bar color
+  */
+  loading: { color: '#fff' },
+  /*
+  ** Global CSS
+  */
+  css: [
+  ],
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+  ],
+  /*
+  ** Nuxt.js dev-modules
+  */
+  buildModules: [
+    '@nuxtjs/vuetify',
+  ],
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/axios',
+    // Doc: https://github.com/nuxt-community/dotenv-module
+  ],
+  /*
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
+  axios: {
+  },
+  /*
+  ** vuetify module configuration
+  ** https://github.com/nuxt-community/vuetify-module
+  */
+  vuetify: {
+    customVariables: ['~/assets/variables.scss'],
+    // treeShake: true,    
+    theme: {
+      dark: false,
+      themes: {
+        dark: {
+          primary: colors.blue.darken2,
+          accent: colors.grey.darken3,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        }
+      }
+    }
+  },
+  /*
+  ** Build configuration
+  */
   build: {
-    modules: [
-      [
-        "@nuxtjs/firebase",
-        {
-          config: {
-            apiKey: "AIzaSyAKEvJuhqLeWCR2jOZsnu7gzwMetRRqw7M",
-            authDomain: "liffcard.firebaseapp.com",
-            databaseURL: "https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "liffcard",
-            storageBucket: "liffcard.appspot.com",
-            messagingSenderId: "597795203569",
-            appId: "1:597795203569:web:3e78ba18ee5d55d8de3c50",
-            measurementId: "G-MCQHNMX8JK",
-          },
-          services: {
-            auth: {
-              initialize: {
-                onAuthStateChangedMutation: "ON_AUTH_STATE_CHANGED_MUTATION",
-              },
-            },
-          },
-        },
-      ],
-    ],
-    babel: {
-      plugins: [
-        [
-          'import',
-          {
-            libraryName: 'vant',
-            // 目前在 nuxt 中无法按需引入样式，因此采用手动引入的方式
-            style: false
-          },
-          'vant'
-        ]
-      ]
+    /*
+    ** You can extend webpack config here
+    */
+    extend (config, ctx) {
     }
   }
-  
-};
+}
