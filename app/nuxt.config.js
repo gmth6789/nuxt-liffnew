@@ -1,6 +1,12 @@
 export default {
+  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+  mode: "spa",
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Vant Nuxt Demo',
+    htmlAttrs: {
+      lang: "en",
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover' }
@@ -16,6 +22,30 @@ export default {
   },
   plugins: ['~/plugins/vant'],
   build: {
+    modules: [
+      [
+        "@nuxtjs/firebase",
+        {
+          config: {
+            apiKey: "AIzaSyAKEvJuhqLeWCR2jOZsnu7gzwMetRRqw7M",
+            authDomain: "liffcard.firebaseapp.com",
+            databaseURL: "https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "liffcard",
+            storageBucket: "liffcard.appspot.com",
+            messagingSenderId: "597795203569",
+            appId: "1:597795203569:web:3e78ba18ee5d55d8de3c50",
+            measurementId: "G-MCQHNMX8JK",
+          },
+          services: {
+            auth: {
+              initialize: {
+                onAuthStateChangedMutation: "ON_AUTH_STATE_CHANGED_MUTATION",
+              },
+            },
+          },
+        },
+      ],
+    ],
     babel: {
       plugins: [
         [
