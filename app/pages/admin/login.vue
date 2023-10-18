@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import SignIn from "../components/SignIn.vue";
+import SignIn from "../../components/SignIn.vue";
 export default {
   computed: {
     currentUser() {
@@ -23,7 +23,7 @@ export default {
     signOut() {
       console.log("Signed Out");
       this.$fire.auth.signOut();
-      window.location = "/login";
+      window.location = "/admin/login";
     },
   },
   components: { SignIn },
