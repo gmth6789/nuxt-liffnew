@@ -1,94 +1,69 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-          <v-btn color="primary" v-on:click="signOut()"> Sign Out </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+  <div>
+    <van-image
+      class="user-poster"
+      src="https://img.yzcdn.cn/public_files/2017/10/23/8690bb321356070e0b8c4404d087f8fd.png"
+    />
+    <van-row class="user-links">
+      <van-col span="6">
+        <van-icon name="pending-payment" />
+        待付款
+      </van-col>
+      <van-col span="6">
+        <van-icon name="records" />
+        待接单
+      </van-col>
+      <van-col span="6">
+        <van-icon name="tosend" />
+        待发货
+      </van-col>
+      <van-col span="6">
+        <van-icon name="logistics" />
+        已发货
+      </van-col>
+    </van-row>
+
+    <van-cell-group class="user-group">
+      <van-cell icon="records" title="全部订单" is-link />
+    </van-cell-group>
+
+    <van-cell-group>
+      <van-cell icon="points" title="我的积分" is-link />
+      <van-cell icon="gold-coin-o" title="我的优惠券" is-link />
+      <van-cell icon="gift-o" title="我收到的礼物" is-link />
+    </van-cell-group>
+  </div>
 </template>
 
-<script>
-export default {
-  middleware: "auth",
-  methods: {
-    signOut() {
-      this.$fire.auth.signOut();
-      window.location = "/login";
-    },
-  },
-};
-</script>
+<style lang="less">
+body {
+  margin: 0;
+  font-size: 16px;
+  background-color: #f8f8f8;
+  -webkit-font-smoothing: antialiased;
+}
+
+.user {
+  &-poster {
+    width: 100%;
+    height: 53vw;
+    display: block;
+  }
+
+  &-group {
+    margin-bottom: 15px;
+  }
+
+  &-links {
+    padding: 15px 0;
+    font-size: 12px;
+    text-align: center;
+    background-color: #fff;
+
+    .van-icon {
+      display: block;
+      font-size: 24px;
+    }
+  }
+}
+</style>
