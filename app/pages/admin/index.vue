@@ -87,7 +87,7 @@ export default {
   methods: {
     signOut() {
       this.$fire.auth.signOut();
-      window.location = "/admin/login";
+      window.location = "/login";
     },
   },
 };
