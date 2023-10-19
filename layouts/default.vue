@@ -35,10 +35,10 @@ export default {
     font-weight: bold;
   }
   .text-main{
-    font-size: 18px;
+    font-size: 20px;
   }
   .text-title{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
   }
   .w-100{
