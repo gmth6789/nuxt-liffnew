@@ -217,7 +217,7 @@ export default {
     ]
   }
 }
-      ]), //sendshare
+     } ]), //sendshare
       then(result => {
         this.stamps = this.stamps.map((obj) => {
           if(obj.name == result.value){
