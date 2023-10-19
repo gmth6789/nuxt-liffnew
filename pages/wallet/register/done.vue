@@ -15,11 +15,11 @@
             <div class="text-center mt-10">
               <img src="~/assets/welcome.png" alt="" width="236px">
               <h1 class="text-title">Welcome, {{ name }}</h1>
-              <p class="mt-7">
+              <!-- <p class="mt-7">
                 Welcome to the event,<br/>Tons of workshop are waiting for you.<br/> We hope you have a good time here.
-              </p>
+              </p> -->
             </div>
-            <v-btn rounded color="primary" dark class="w-100 mt-10 my-btn" @click="workshop">Register Workshop</v-btn>
+            <v-btn rounded color="primary" dark class="w-100 mt-10 my-btn" @click="home">หน้าภารกิจ</v-btn>
             <div class="w-100 text-center my-btn outlined text-primary mt-5" @click="close">Close</div>                    
           </div>
         </v-col>
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     workshop(){
-      this.$router.push('workshop')
+      this.$router.push('home')
     },
     close(){
       liff.closeWindow();

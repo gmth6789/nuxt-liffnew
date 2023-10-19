@@ -86,7 +86,7 @@ export default {
     isDone(){
       this.$axios.get(`https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app/members/${this.$store.getters.getLine.userId}/profile.json`).then((res) => {
         if(res.data != null){
-          this.$router.push('register/done');
+          this.$router.push('wallet/register/done');
         }
       });
     },
@@ -118,7 +118,7 @@ export default {
     next(){      
       if(this.validate()){
         this.$store.dispatch('setRegister', this.form)
-        this.$router.push('/register/step2')
+        this.$router.push('wallet/register/step2')
       }      
     }
   }

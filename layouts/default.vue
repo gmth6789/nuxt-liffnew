@@ -25,20 +25,20 @@ export default {
     font-weight: bold;
   }
   .v-application .primary{
-    background-color: #1A56BE !important;
-    border-color: #1A56BE !important;
+    background-color: #F80096 !important;
+    border-color: #D40F86 !important;
   }
   .text-primary{
-    color: #1A56BE !important;
+    color: #000000 !important;
   }
   .bold{
     font-weight: bold;
   }
   .text-main{
-    font-size: 20px;
+    font-size: 18px;
   }
   .text-title{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
   .w-100{
