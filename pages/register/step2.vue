@@ -168,7 +168,7 @@ export default {
       if(this.validate()){
         this.$store.dispatch('setRegister', this.form)
         this.$axios.patch(`https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app/members/${this.$store.getters.getLine.userId}/profile.json`, this.$store.getters.getRegister).then((res) => {
-          this.$router.push('/go')
+          this.$router.push('/register/go')
         }).catch(e => console.log(e))         
       }      
     }
