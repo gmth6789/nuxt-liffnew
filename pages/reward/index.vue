@@ -216,6 +216,8 @@ export default {
         }
       }
     ]
+  }
+  }
           }
         }
       ]), //sendshare
