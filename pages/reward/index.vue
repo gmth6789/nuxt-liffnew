@@ -6,7 +6,7 @@
       flat
       dark
     >
-    <v-toolbar-title>Reward Card</v-toolbar-title>
+    <v-toolbar-title>ภารกิจแชร์รับคูปอง</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
       <v-row>
@@ -64,7 +64,7 @@ export default {
               this.$store.dispatch('setUser', res.data);
             }
           });
-          this.$axios.get(`https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
+          this.$axios.get(`https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/betfilx/${this.$store.getters.getLine.userId}.json`).then((res) => {            
             if(res.data != null){
               this.stamps = res.data
             }
@@ -102,7 +102,7 @@ export default {
           }
           return obj;
         })
-        this.$axios.patch(`https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/${this.$store.getters.getLine.userId}.json`, {...this.stamps}).then((res) => {            
+        this.$axios.patch(`https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/betfilx/${this.$store.getters.getLine.userId}.json`, {...this.stamps}).then((res) => {            
 
         }).catch(e => alert(e))
       }).catch(e => alert(e))
@@ -173,7 +173,7 @@ export default {
   .circle{
     background: #FFF;
     border-radius: 50%;
-    border: 2px #1A56BE solid;
+    border: 2px #F80096 solid;
     height: 55px;
     width: 55px;    
     justify-content: center;
