@@ -95,7 +95,7 @@ export default {
   },
   methods: {
     sendShare() {
-      const result = await liff.shareTargetPicker([
+      const result = liff.shareTargetPicker([
         {
           "type": "flex",
           "altText": "Flex Message",
