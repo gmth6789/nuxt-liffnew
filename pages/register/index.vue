@@ -118,7 +118,7 @@ export default {
     next(){      
       if(this.validate()){
         this.$store.dispatch('setRegister', this.form)
-        this.$router.push('wallet/register/step2')
+        this.$router.push('/register/step2')
       }      
     }
   }
