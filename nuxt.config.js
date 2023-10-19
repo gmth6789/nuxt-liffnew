@@ -31,10 +31,9 @@ export default {
   */
   css: [
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/liff-init.client.js'
   ],
   /*
   ** Nuxt.js dev-modules
