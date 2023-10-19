@@ -100,35 +100,35 @@ export default {
           "type": "flex",
           "altText": "เว็บดีบอกต่อ",
           "contents": {
-  "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_2_restaurant.png",
-    "size": "full",
-    "aspectRatio": "20:13",
-    "aspectMode": "cover",
-    "action": {
-      "type": "uri",
-      "uri": "https://linecorp.com"
-    }
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "md",
-    "action": {
-      "type": "uri",
-      "uri": "https://tklv8c-3000.csb.app/register"
-    },
-    "contents": [
-      {
-        "type": "text",
-        "text": "รับทันทีเครดิตฟรี 30 บาท",
-        "size": "xl",
-        "weight": "bold"
-      },
-      {
-        "type": "box",
+            "type": "bubble",
+            "hero": {
+              "type": "image",
+              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_2_restaurant.png",
+              "size": "full",
+              "aspectRatio": "20:13",
+              "aspectMode": "cover",
+              "action": {
+                "type": "uri",
+                "uri": "https://linecorp.com"
+                }
+              },
+              "body": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "md",
+                "action": {
+                  "type": "uri",
+                  "uri": "https://tklv8c-3000.csb.app/register"
+                  },
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "รับทันทีเครดิตฟรี 30 บาท",
+                      "size": "xl",
+                      "weight": "bold"
+                      },
+                    {
+                      "type": "box",
         "layout": "vertical",
         "spacing": "sm",
         "contents": [
