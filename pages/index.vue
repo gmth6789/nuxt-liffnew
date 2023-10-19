@@ -1,69 +1,48 @@
 <template>
-  <div>
-    <van-image
-      class="user-poster"
-      src="https://img.yzcdn.cn/public_files/2017/10/23/8690bb321356070e0b8c4404d087f8fd.png"
-    />
-    <van-row class="user-links">
-      <van-col span="6">
-        <van-icon name="pending-payment" />
-        待付款
-      </van-col>
-      <van-col span="6">
-        <van-icon name="records" />
-        待接单
-      </van-col>
-      <van-col span="6">
-        <van-icon name="tosend" />
-        待发货
-      </van-col>
-      <van-col span="6">
-        <van-icon name="logistics" />
-        已发货
-      </van-col>
-    </van-row>
-
-    <van-cell-group class="user-group">
-      <van-cell icon="records" title="全部订单" is-link />
-    </van-cell-group>
-
-    <van-cell-group>
-      <van-cell icon="points" title="我的积分" is-link />
-      <van-cell icon="gold-coin-o" title="我的优惠券" is-link />
-      <van-cell icon="gift-o" title="我收到的礼物" is-link />
-    </van-cell-group>
-  </div>
+  <main>
+    <h1>create-liff-app</h1>
+    <p v-if="message">
+      {{ message }}
+    </p>
+    <p v-if="error">
+      <code>{{ error }}</code>
+    </p>
+    <a href="https://developers.line.biz/ja/docs/liff/" target="_blank" rel="noreferrer">
+      LIFF Documentation
+    </a>
+  </main>
 </template>
 
-<style lang="less">
-body {
-  margin: 0;
-  font-size: 16px;
-  background-color: #f8f8f8;
-  -webkit-font-smoothing: antialiased;
-}
-
-.user {
-  &-poster {
-    width: 100%;
-    height: 53vw;
-    display: block;
-  }
-
-  &-group {
-    margin-bottom: 15px;
-  }
-
-  &-links {
-    padding: 15px 0;
-    font-size: 12px;
-    text-align: center;
-    background-color: #fff;
-
-    .van-icon {
-      display: block;
-      font-size: 24px;
+<script>
+export default {
+  data () {
+    return {
+      message: '',
+      error: ''
     }
+  },
+  mounted () {
+    // mounted() is rendered when DOM is rendered
+    // wait liff.init()
+    this.$liffInit
+      .then(() => {
+        this.message = 'LIFF init succeeded.'
+      })
+      .catch((e) => {
+        this.message = 'LIFF init failed.'
+        this.error = e.toString()
+      })
   }
+}
+</script>
+
+<style>
+main {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
