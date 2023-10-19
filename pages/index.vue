@@ -19,7 +19,7 @@
     <div class="home__badges">
     </div>
     <div class="home__buttons">
-     <NuxtLink to="/wallet/register">
+     <NuxtLink to="/register">
       <a
         target="_blank"
         rel="noreferrer"
