@@ -195,7 +195,7 @@ export default {
           }
         }
       ])
-      then(result => {
+      if (result) {
         this.stamps = this.stamps.map((obj) => {
           if(obj.name == result.value){
             obj.value = true;
