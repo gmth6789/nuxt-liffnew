@@ -193,7 +193,7 @@ export default {
       }
     }
     &.end{
-      background: #1A56BE;
+      background: #F80096;
       span{
         font-size: 16px;        
         color: #FFF;
