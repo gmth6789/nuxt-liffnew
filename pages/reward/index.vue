@@ -98,282 +98,127 @@ export default {
       liff.shareTargetPicker([ //share
         {
           "type": "flex",
-  "contents": {
-    "size": "giga",
-    "type": "bubble",
-    "body": {
-      "layout": "vertical",
-      "paddingAll": "0px",
-      "type": "box",
-      "contents": [
-        {
-          "layout": "horizontal",
-          "paddingAll": "10px",
-          "spacing": "md",
-          "type": "box",
-          "action": {
-            "label": "action",
-            "type": "uri",
-            "uri": "${_.trim(vcard.website)}"
-          },
-          "contents": [
+          "altText": "เว็บดีบอกต่อ",
+          "contents": {
             {
-              "borderColor": "#1877f2",
-              "borderWidth": "2px",
-              "cornerRadius": "20px",
-              "height": "40px",
-              "layout": "vertical",
-              "type": "box",
-              "width": "40px",
-              "contents": [
-                {
-                  "borderColor": "#ffffff",
-                  "borderWidth": "2px",
-                  "cornerRadius": "20px",
-                  "height": "36px",
-                  "layout": "vertical",
-                  "type": "box",
-                  "width": "36px",
-                  "contents": [
-                    {
-                      "aspectMode": "cover",
-                      "aspectRatio": "1:1",
-                      "size": "full",
-                      "type": "image",
-                      "url": "${vcard.avatar}"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "layout": "vertical",
-              "type": "box",
-              "contents": [
-                {
-                  "layout": "horizontal",
-                  "type": "box",
-                  "contents": [
-                    {
-                      "flex": 0,
-                      "gravity": "center",
-                      "text": "${vcard.author}",
-                      "type": "text",
-                      "weight": "bold"
-                    },
-                    {
-                      "gravity": "center",
-                      "text": "${vcard.action}",
-                      "type": "text"
-                    }
-                  ]
-                },
-                {
-                  "flex": 1,
-                  "layout": "vertical",
-                  "type": "box",
-                  "contents": [
-                    {
-                      "type": "filler"
-                    }
-                  ]
-                },
-                {
-                  "size": "xxs",
-                  "text": "${dayjs().format('M月D日 HH:mm')}",
-                  "type": "text"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "layout": "vertical",
-          "type": "box",
-          "action": {
-            "label": "action",
-            "type": "uri",
-            "uri": "${_.trim(vcard.link)}"
-          },
-          "contents": [
-            {
-              "aspectMode": "cover",
-              "aspectRatio": "${vcard.ratio}",
-              "size": "full",
-              "type": "image",
-              "url": "${vcard.image}"
-            }
-          ]
-        },
-        {
-          "layout": "vertical",
-          "paddingAll": "15px",
-          "spacing": "md",
-          "type": "box",
-          "action": {
-            "label": "action",
-            "type": "uri",
-            "uri": "${_.trim(vcard.link)}"
-          },
-          "contents": [
-            {
-              "size": "lg",
-              "text": "${vcard.title}",
-              "type": "text",
-              "weight": "bold"
-            },
-            {
-              "maxLines": 3,
-              "size": "sm",
-              "text": "${escapeStr(vcard.desc)}",
-              "type": "text",
-              "wrap": true
-            }
-          ]
-        },
-        {
-          "type": "separator"
-        },
-        {
-          "layout": "horizontal",
-          "type": "box",
-          "contents": [
-            {
-              "flex": 1,
-              "layout": "horizontal",
-              "paddingAll": "15px",
-              "spacing": "sm",
-              "type": "box",
-              "action": {
-                "label": "action",
-                "type": "uri",
-                "uri": "${liffLink}"
-              },
-              "contents": [
-                {
-                  "flex": 1,
-                  "layout": "vertical",
-                  "type": "box",
-                  "contents": [
-                    {
-                      "type": "filler"
-                    }
-                  ]
-                },
-                {
-                  "height": "20px",
-                  "layout": "vertical",
-                  "type": "box",
-                  "width": "20px",
-                  "contents": [
-                    {
-                      "aspectMode": "cover",
-                      "aspectRatio": "1:1",
-                      "size": "full",
-                      "type": "image",
-                      "url": "https://i.imgur.com/IFjR25G.png"
-                    }
-                  ]
-                },
-                {
-                  "flex": 0,
-                  "gravity": "center",
-                  "text": "分享",
-                  "type": "text"
-                },
-                {
-                  "flex": 1,
-                  "layout": "vertical",
-                  "type": "box",
-                  "contents": [
-                    {
-                      "type": "filler"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "flex": 1,
-              "layout": "horizontal",
-              "paddingAll": "15px",
-              "spacing": "sm",
-              "type": "box",
-              "action": {
-                "label": "action",
-                "type": "uri",
-                "uri": "${_.trim(vcard.link)}"
-              },
-              "contents": [
-                {
-                  "flex": 1,
-                  "layout": "vertical",
-                  "type": "box",
-                  "contents": [
-                    {
-                      "type": "filler"
-                    }
-                  ]
-                },
-                {
-                  "height": "20px",
-                  "layout": "vertical",
-                  "type": "box",
-                  "width": "20px",
-                  "contents": [
-                    {
-                      "aspectMode": "cover",
-                      "aspectRatio": "1:1",
-                      "size": "full",
-                      "type": "image",
-                      "url": "https://i.imgur.com/tg4zN4R.png"
-                    }
-                  ]
-                },
-                {
-                  "flex": 0,
-                  "gravity": "center",
-                  "text": "開啟",
-                  "type": "text"
-                },
-                {
-                  "flex": 1,
-                  "layout": "vertical",
-                  "type": "box",
-                  "contents": [
-                    {
-                      "type": "filler"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "height": "1px",
-          "layout": "vertical",
-          "offsetStart": "0px",
-          "offsetTop": "0px",
-          "position": "absolute",
-          "type": "box",
-          "width": "1px",
-          "contents": [
-            {
-              "align": "center",
-              "aspectMode": "cover",
-              "aspectRatio": "1:1",
-              "gravity": "center",
-              "size": "full",
-              "type": "image",
-              "url": "${gaScreenView(vcard)}"
-            }
-          ]
-        }
-      ]
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_2_restaurant.png",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "uri": "https://linecorp.com"
     }
-  }
-  ]}, //sendshare
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "md",
+    "action": {
+      "type": "uri",
+      "uri": "https://tklv8c-3000.csb.app/register"
+    },
+    "contents": [
+      {
+        "type": "text",
+        "text": "รับทันทีเครดิตฟรี 30 บาท",
+        "size": "xl",
+        "weight": "bold"
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_regular_32.png"
+              },
+              {
+                "type": "text",
+                "text": "เล่นได้เฉพาะสล็อต",
+                "weight": "bold",
+                "margin": "sm",
+                "flex": 0
+              },
+              {
+                "type": "text",
+                "text": "30 บาท",
+                "size": "sm",
+                "align": "end",
+                "color": "#aaaaaa"
+              }
+            ]
+          },
+          {
+            "type": "box",
+            "layout": "baseline",
+            "contents": [
+              {
+                "type": "icon",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_large_32.png"
+              },
+              {
+                "type": "text",
+                "text": "ถอนได้สูงสุด",
+                "weight": "bold",
+                "margin": "sm",
+                "flex": 0
+              },
+              {
+                "type": "text",
+                "text": "100 บาท",
+                "size": "sm",
+                "align": "end",
+                "color": "#aaaaaa"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "text": "betfilx",
+        "wrap": true,
+        "color": "#aaaaaa",
+        "size": "xxs"
+      }
+    ]
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "button",
+        "action": {
+          "type": "uri",
+          "label": "สมัครสมาชิก",
+          "uri": "https://liff.line.me/2001038259-m3dDoEPZ"
+        }
+      },
+      {
+        "type": "button",
+        "style": "primary",
+        "color": "#F1139A",
+        "margin": "xxl",
+        "action": {
+          "type": "uri",
+          "label": "แชร์ให้เพื่อน",
+          "uri": "https://liff.line.me/2001038259-zO07aGp8"
+        }
+      }
+    ]
+          }
+        }
+      ]), //sendshare
       then(result => {
         this.stamps = this.stamps.map((obj) => {
           if(obj.name == result.value){
