@@ -64,7 +64,7 @@ export default {
               this.$store.dispatch('setUser', res.data);
             }
           });
-          this.$axios.get(`https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/betfilx/${this.$store.getters.getLine.userId}.json`).then((res) => {            
+          this.$axios.get(`https://liffcard-default-rtdb.asia-southeast1.firebasedatabase.app/rewards/${this.$store.getters.getLine.userId}.json`).then((res) => {            
             if(res.data != null){
               this.stamps = res.data
             }
@@ -231,7 +231,7 @@ export default {
       }).catch(e => alert(e))
     },
     next(){
-      this.$router.push('reward/done');
+      this.$router.push('/reward/done');
     }
   },
   data(){
