@@ -100,124 +100,98 @@ export default {
           "type": "flex",
           "altText": "เว็บดีบอกต่อ",
           "contents": {
-            {
-  "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_2_restaurant.png",
-    "size": "full",
-    "aspectRatio": "20:13",
-    "aspectMode": "cover",
-    "action": {
-      "type": "uri",
-      "uri": "https://linecorp.com"
-    }
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "md",
-    "action": {
-      "type": "uri",
-      "uri": "https://tklv8c-3000.csb.app/register"
-    },
-    "contents": [
-      {
-        "type": "text",
-        "text": "รับทันทีเครดิตฟรี 30 บาท",
-        "size": "xl",
-        "weight": "bold"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "spacing": "sm",
-        "contents": [
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_regular_32.png"
-              },
-              {
-                "type": "text",
-                "text": "เล่นได้เฉพาะสล็อต",
-                "weight": "bold",
-                "margin": "sm",
-                "flex": 0
-              },
-              {
-                "type": "text",
-                "text": "30 บาท",
-                "size": "sm",
-                "align": "end",
-                "color": "#aaaaaa"
-              }
-            ]
-          },
-          {
-            "type": "box",
-            "layout": "baseline",
-            "contents": [
-              {
-                "type": "icon",
-                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/restaurant_large_32.png"
-              },
-              {
-                "type": "text",
-                "text": "ถอนได้สูงสุด",
-                "weight": "bold",
-                "margin": "sm",
-                "flex": 0
-              },
-              {
-                "type": "text",
-                "text": "100 บาท",
-                "size": "sm",
-                "align": "end",
-                "color": "#aaaaaa"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "text": "betfilx",
-        "wrap": true,
-        "color": "#aaaaaa",
-        "size": "xxs"
-      }
-    ]
-  },
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "button",
-        "action": {
-          "type": "uri",
-          "label": "สมัครสมาชิก",
-          "uri": "https://liff.line.me/2001038259-m3dDoEPZ"
-        }
-      },
-      {
-        "type": "button",
-        "style": "primary",
-        "color": "#F1139A",
-        "margin": "xxl",
-        "action": {
-          "type": "uri",
-          "label": "แชร์ให้เพื่อน",
-          "uri": "https://liff.line.me/2001038259-zO07aGp8"
-        }
-      }
-    ]
-  }
-  }
+            "type": "bubble",
+            "body": {
+              "type": "box",
+              "layout": "vertical",
+              "spacing": "md",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "BROWN'S ADVENTURE",
+                  "size": "xl",
+                  "gravity": "center",
+                  "weight": "bold",
+                  "wrap": true
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "spacing": "sm",
+                  "margin": "lg",
+                  "contents": [
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Date",
+                          "flex": 1,
+                          "size": "sm",
+                          "color": "#AAAAAA"
+                        },
+                        {
+                          "type": "text",
+                          "text": "Monday 25, 9:00PM",
+                          "flex": 4,
+                          "size": "sm",
+                          "color": "#666666",
+                          "wrap": true
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "baseline",
+                      "spacing": "sm",
+                      "contents": [
+                        {
+                          "type": "text",
+                          "text": "Place",
+                          "flex": 1,
+                          "size": "sm",
+                          "color": "#AAAAAA"
+                        },
+                        {
+                          "type": "text",
+                          "text": "LINE Thailand",
+                          "flex": 4,
+                          "size": "sm",
+                          "color": "#666666",
+                          "wrap": true
+                        }
+                      ]
+                    },
+                    {
+                      "type": "box",
+                      "layout": "vertical",
+                      "margin": "xxl",
+                      "contents": [
+                        {
+                          "type": "spacer"
+                        },
+                        {
+                          "type": "image",
+                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/linecorp_code_withborder.png",
+                          "size": "xl",
+                          "aspectMode": "cover"
+                        },
+                        {
+                          "type": "text",
+                          "text": "You can enter the theater by using this code instead of a ticket",
+                          "margin": "xxl",
+                          "size": "xs",
+                          "color": "#AAAAAA",
+                          "wrap": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
           }
         }
       ]), //sendshare
