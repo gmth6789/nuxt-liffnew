@@ -95,106 +95,285 @@ export default {
   },
   methods: {
     sendShare() {
-      liff.shareTargetPicker([
+      liff.shareTargetPicker([ //share
         {
           "type": "flex",
-          "altText": "Flex Message",
-          "contents": {
-            "type": "bubble",
-            "body": {
-              "type": "box",
+  "contents": {
+    "size": "giga",
+    "type": "bubble",
+    "body": {
+      "layout": "vertical",
+      "paddingAll": "0px",
+      "type": "box",
+      "contents": [
+        {
+          "layout": "horizontal",
+          "paddingAll": "10px",
+          "spacing": "md",
+          "type": "box",
+          "action": {
+            "label": "action",
+            "type": "uri",
+            "uri": "${_.trim(vcard.website)}"
+          },
+          "contents": [
+            {
+              "borderColor": "#1877f2",
+              "borderWidth": "2px",
+              "cornerRadius": "20px",
+              "height": "40px",
               "layout": "vertical",
-              "spacing": "md",
+              "type": "box",
+              "width": "40px",
               "contents": [
                 {
-                  "type": "text",
-                  "text": "BROWN'S ADVENTURE",
-                  "size": "xl",
-                  "gravity": "center",
-                  "weight": "bold",
-                  "wrap": true
-                },
-                {
-                  "type": "box",
+                  "borderColor": "#ffffff",
+                  "borderWidth": "2px",
+                  "cornerRadius": "20px",
+                  "height": "36px",
                   "layout": "vertical",
-                  "spacing": "sm",
-                  "margin": "lg",
+                  "type": "box",
+                  "width": "36px",
                   "contents": [
                     {
-                      "type": "box",
-                      "layout": "baseline",
-                      "spacing": "sm",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "Date",
-                          "flex": 1,
-                          "size": "sm",
-                          "color": "#AAAAAA"
-                        },
-                        {
-                          "type": "text",
-                          "text": "Monday 25, 9:00PM",
-                          "flex": 4,
-                          "size": "sm",
-                          "color": "#666666",
-                          "wrap": true
-                        }
-                      ]
+                      "aspectMode": "cover",
+                      "aspectRatio": "1:1",
+                      "size": "full",
+                      "type": "image",
+                      "url": "${vcard.avatar}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layout": "vertical",
+              "type": "box",
+              "contents": [
+                {
+                  "layout": "horizontal",
+                  "type": "box",
+                  "contents": [
+                    {
+                      "flex": 0,
+                      "gravity": "center",
+                      "text": "${vcard.author}",
+                      "type": "text",
+                      "weight": "bold"
                     },
                     {
-                      "type": "box",
-                      "layout": "baseline",
-                      "spacing": "sm",
-                      "contents": [
-                        {
-                          "type": "text",
-                          "text": "Place",
-                          "flex": 1,
-                          "size": "sm",
-                          "color": "#AAAAAA"
-                        },
-                        {
-                          "type": "text",
-                          "text": "LINE Thailand",
-                          "flex": 4,
-                          "size": "sm",
-                          "color": "#666666",
-                          "wrap": true
-                        }
-                      ]
-                    },
+                      "gravity": "center",
+                      "text": "${vcard.action}",
+                      "type": "text"
+                    }
+                  ]
+                },
+                {
+                  "flex": 1,
+                  "layout": "vertical",
+                  "type": "box",
+                  "contents": [
                     {
-                      "type": "box",
-                      "layout": "vertical",
-                      "margin": "xxl",
-                      "contents": [
-                        {
-                          "type": "spacer"
-                        },
-                        {
-                          "type": "image",
-                          "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/linecorp_code_withborder.png",
-                          "size": "xl",
-                          "aspectMode": "cover"
-                        },
-                        {
-                          "type": "text",
-                          "text": "You can enter the theater by using this code instead of a ticket",
-                          "margin": "xxl",
-                          "size": "xs",
-                          "color": "#AAAAAA",
-                          "wrap": true
-                        }
-                      ]
+                      "type": "filler"
+                    }
+                  ]
+                },
+                {
+                  "size": "xxs",
+                  "text": "${dayjs().format('M月D日 HH:mm')}",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layout": "vertical",
+          "type": "box",
+          "action": {
+            "label": "action",
+            "type": "uri",
+            "uri": "${_.trim(vcard.link)}"
+          },
+          "contents": [
+            {
+              "aspectMode": "cover",
+              "aspectRatio": "${vcard.ratio}",
+              "size": "full",
+              "type": "image",
+              "url": "${vcard.image}"
+            }
+          ]
+        },
+        {
+          "layout": "vertical",
+          "paddingAll": "15px",
+          "spacing": "md",
+          "type": "box",
+          "action": {
+            "label": "action",
+            "type": "uri",
+            "uri": "${_.trim(vcard.link)}"
+          },
+          "contents": [
+            {
+              "size": "lg",
+              "text": "${vcard.title}",
+              "type": "text",
+              "weight": "bold"
+            },
+            {
+              "maxLines": 3,
+              "size": "sm",
+              "text": "${escapeStr(vcard.desc)}",
+              "type": "text",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "separator"
+        },
+        {
+          "layout": "horizontal",
+          "type": "box",
+          "contents": [
+            {
+              "flex": 1,
+              "layout": "horizontal",
+              "paddingAll": "15px",
+              "spacing": "sm",
+              "type": "box",
+              "action": {
+                "label": "action",
+                "type": "uri",
+                "uri": "${liffLink}"
+              },
+              "contents": [
+                {
+                  "flex": 1,
+                  "layout": "vertical",
+                  "type": "box",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    }
+                  ]
+                },
+                {
+                  "height": "20px",
+                  "layout": "vertical",
+                  "type": "box",
+                  "width": "20px",
+                  "contents": [
+                    {
+                      "aspectMode": "cover",
+                      "aspectRatio": "1:1",
+                      "size": "full",
+                      "type": "image",
+                      "url": "https://i.imgur.com/IFjR25G.png"
+                    }
+                  ]
+                },
+                {
+                  "flex": 0,
+                  "gravity": "center",
+                  "text": "分享",
+                  "type": "text"
+                },
+                {
+                  "flex": 1,
+                  "layout": "vertical",
+                  "type": "box",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "flex": 1,
+              "layout": "horizontal",
+              "paddingAll": "15px",
+              "spacing": "sm",
+              "type": "box",
+              "action": {
+                "label": "action",
+                "type": "uri",
+                "uri": "${_.trim(vcard.link)}"
+              },
+              "contents": [
+                {
+                  "flex": 1,
+                  "layout": "vertical",
+                  "type": "box",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    }
+                  ]
+                },
+                {
+                  "height": "20px",
+                  "layout": "vertical",
+                  "type": "box",
+                  "width": "20px",
+                  "contents": [
+                    {
+                      "aspectMode": "cover",
+                      "aspectRatio": "1:1",
+                      "size": "full",
+                      "type": "image",
+                      "url": "https://i.imgur.com/tg4zN4R.png"
+                    }
+                  ]
+                },
+                {
+                  "flex": 0,
+                  "gravity": "center",
+                  "text": "開啟",
+                  "type": "text"
+                },
+                {
+                  "flex": 1,
+                  "layout": "vertical",
+                  "type": "box",
+                  "contents": [
+                    {
+                      "type": "filler"
                     }
                   ]
                 }
               ]
             }
-          }
+          ]
+        },
+        {
+          "height": "1px",
+          "layout": "vertical",
+          "offsetStart": "0px",
+          "offsetTop": "0px",
+          "position": "absolute",
+          "type": "box",
+          "width": "1px",
+          "contents": [
+            {
+              "align": "center",
+              "aspectMode": "cover",
+              "aspectRatio": "1:1",
+              "gravity": "center",
+              "size": "full",
+              "type": "image",
+              "url": "${gaScreenView(vcard)}"
+            }
+          ]
         }
-      ]),
+      ]
+    }
+  }
+  ]}, //sendshare
       then(result => {
         this.stamps = this.stamps.map((obj) => {
           if(obj.name == result.value){
