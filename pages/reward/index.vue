@@ -202,7 +202,7 @@ export default {
     span{
       align-self: center;
       font-size: 20px;
-      color: #1A56BE;
+      color: #F80096;
       font-weight: bold;
     }
   }
