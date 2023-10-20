@@ -11,9 +11,11 @@
     <v-container class="pt-0 pb-0">
       <v-row>
         <v-col cols="12">          
-          <div class="mt-8 text-primary text-title text-center">
-            Step 1 of 2
-          </div>
+          <van-steps :active="active">
+          <van-step>Step1</van-step>
+          <van-step>Step2</van-step>
+          <van-step>Step3</van-step>
+          </van-steps>
         </v-col>
         <v-col cols="12" class="text-center pb-0 profile-img">
           <img v-if="getLine.pictureUrl == ''" src="~/assets/profile.png" alt="" width="155">

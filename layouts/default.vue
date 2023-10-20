@@ -1,8 +1,10 @@
 <template>
+<div class="container">
   <v-app>
     <nuxt></nuxt>
     <Dialog/>
   </v-app>
+</div>
 </template>
 
 <script>

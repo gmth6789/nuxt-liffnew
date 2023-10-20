@@ -32,10 +32,13 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/index.css',
+    '~/assets/vant.css',
   ],
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '~/plugins/liff-init.client.js'
+    '~/plugins/liff-init.client.js',
+    '~/plugins/vant'
   ],
   /*
   ** Nuxt.js dev-modules
