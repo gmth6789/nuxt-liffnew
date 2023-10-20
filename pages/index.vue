@@ -37,18 +37,20 @@
       >
        สมัครสมาชิก
       </a></NuxtLink>
-    </div></div>
+    </div>
+	<Tabbar />
+	</div>
     </div>
 </template>
 
-	<style>
-		.flex50-clz {
-			color: #ffffff;
-			background-image: url(./static/111.jpg);
-		}
-		.text64-clz {
-			margin-left: 0px;
-			font-weight: bold;
+<style>
+.flex50-clz {
+	color: #ffffff;
+	background-image: url(./static/111.jpg);
+	}
+.text64-clz {
+	margin-left: 0px;
+	font-weight: bold;
 			width: 100% !important;
 			font-size: 14px !important;
 			margin-top: 25px;

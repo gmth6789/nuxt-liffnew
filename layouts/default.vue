@@ -21,6 +21,12 @@ export default {
   .v-application{
     font-family: 'Quicksand', sans-serif;
   }
+  .container {
+  width: 100%;
+  padding: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
   .v-toolbar__title{
     text-align: center;
     width: 100%;
