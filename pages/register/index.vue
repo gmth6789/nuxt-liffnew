@@ -15,7 +15,7 @@
           <van-step>Step1</van-step>
           <van-step>Step2</van-step>
           <van-step>Step3</van-step>
-          </van-steps>
+</van-steps>
         </v-col>
         <v-col cols="12" class="text-center pb-0 profile-img">
           <img v-if="getLine.pictureUrl == ''" src="~/assets/profile.png" alt="" width="155">
@@ -124,7 +124,6 @@ export default {
       }      
     }
   }
-
 }
 </script>
 <style lang="scss" scoped>

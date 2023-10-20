@@ -1,6 +1,8 @@
 <template>
 <div class="container">
+
   <v-app>
+  <Nav />
     <nuxt></nuxt>
     <Dialog/>
   </v-app>

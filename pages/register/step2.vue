@@ -1,11 +1,14 @@
 <template>
   <div>
-    <v-app-bar
-      color="primary"
-      dense
-      flat
-      dark
-    >
+    <van-nav-bar
+    fixed
+    left-arrow
+    @click-left="onClickLeft"
+    :title="title"
+    :right-text="rightText"
+    @click-right="onClickRight"
+  ></van-nav-bar>
+  
       <v-toolbar-title>Register</v-toolbar-title>
     </v-app-bar>
     <v-container class="pt-0 pb-0">
